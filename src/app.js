@@ -3,6 +3,7 @@ import { getUserData } from "./util.js";
 import page from "../node_modules/page/page.mjs";
 import { loginPage } from "./views/login.js";
 import { html,render } from "../node_modules/lit-html/lit-html.js";
+import { registerPage } from "./views/register.js";
 
 
 
@@ -37,5 +38,6 @@ document.getElementById('logoutBtn').addEventListener('click', (e) => {
 
 page(decorateContent);
 page('/login',loginPage);
+page('/register',registerPage);
 updateUserNav();
 page.start();
