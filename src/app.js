@@ -6,6 +6,7 @@ import { html,render } from "../node_modules/lit-html/lit-html.js";
 import { registerPage } from "./views/register.js";
 import { homePage } from "./views/home.js";
 import { dashboardPage } from "./views/dashboard.js";
+import { createPage } from "./views/create.js";
 
 
 
@@ -43,5 +44,6 @@ page('/', homePage);
 page('/login',loginPage);
 page('/register',registerPage);
 page('/dashboard', dashboardPage);
+page('/create', createPage);
 updateUserNav();
 page.start();
