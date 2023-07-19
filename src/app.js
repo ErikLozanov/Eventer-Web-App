@@ -5,6 +5,7 @@ import { loginPage } from "./views/login.js";
 import { html,render } from "../node_modules/lit-html/lit-html.js";
 import { registerPage } from "./views/register.js";
 import { homePage } from "./views/home.js";
+import { dashboardPage } from "./views/dashboard.js";
 
 
 
@@ -41,5 +42,6 @@ page(decorateContent);
 page('/', homePage);
 page('/login',loginPage);
 page('/register',registerPage);
+page('/dashboard', dashboardPage);
 updateUserNav();
 page.start();

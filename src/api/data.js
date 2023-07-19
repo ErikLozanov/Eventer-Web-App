@@ -17,7 +17,7 @@ export async function getEventById(id) {
     return api.get('/data/events/' + id);
 }
 
-export async function getEventById(id, event) {
+export async function editEvent(id, event) {
     return api.put('/data/events/' + id, event);
 }
 
