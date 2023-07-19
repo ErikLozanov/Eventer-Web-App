@@ -22,7 +22,7 @@ let eventDetailTemplate = (evennt,isOwner,onDelete,likes,showLikeButton, onLike)
             <h3>Going: <span id="go">${likes}</span> times.</h3>
             <div id="action-buttons">
             <!--Edit and Delete are only for creator-->
-                ${eventControlsTemplate(event,isOwner,onDelete)}
+                ${eventControlsTemplate(evennt,isOwner,onDelete)}
               <!--Bonus - Only for logged-in users ( not authors )-->
                 ${likesControlsTemplates(showLikeButton,onLike)}
             </div>
@@ -35,8 +35,8 @@ let eventDetailTemplate = (evennt,isOwner,onDelete,likes,showLikeButton, onLike)
 let eventControlsTemplate = (event,isOwner,onDelete) => {
     if(isOwner) {
         return html`            <div id="action-buttons">
-        <a href="" id="edit-btn">Edit</a>
-        <a href="" id="delete-btn">Delete</a>
+        <a href="/edit/${event._id}" id="edit-btn">Edit</a>
+        <a href="#" @click=${onDelete} id="delete-btn">Delete</a>
         `;
     } else {
         return null;

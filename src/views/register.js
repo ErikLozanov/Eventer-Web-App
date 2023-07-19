@@ -5,7 +5,7 @@ let registerTemplate = (onSubmit) => html`
         <section id="register">
           <div class="form">
             <h2>Register</h2>
-            <form class="register-form">
+            <form @submit=${onSubmit} class="register-form">
               <input
                 type="text"
                 name="email"
