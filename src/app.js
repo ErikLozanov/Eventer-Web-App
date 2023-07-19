@@ -7,6 +7,7 @@ import { registerPage } from "./views/register.js";
 import { homePage } from "./views/home.js";
 import { dashboardPage } from "./views/dashboard.js";
 import { createPage } from "./views/create.js";
+import { detailsPage } from "./views/details.js";
 
 
 
@@ -45,5 +46,6 @@ page('/login',loginPage);
 page('/register',registerPage);
 page('/dashboard', dashboardPage);
 page('/create', createPage);
+page('/details/:id', detailsPage);
 updateUserNav();
 page.start();
