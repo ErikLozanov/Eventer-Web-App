@@ -24,6 +24,7 @@ function decorateContent(ctx,next) {
 
 export function updateUserNav() {
     let userData = getUserData();
+    
     if(userData) {
         document.querySelector('.user').style.display = 'inline-block';
         document.querySelector('.guest').style.display = 'none';

@@ -66,7 +66,7 @@ export async function login(email,password) {
 }
 export async function register(email,password) {
     let result = await post('/users/register', {email,password});
-
+    console.log(result);
     let userData = {
         email: result.email,
         id: result._id,
